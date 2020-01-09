@@ -1,11 +1,11 @@
-## How to install MatrixMath
+## How to install Rainbow
 
-You can install Rainbow eiteher from contribution manager or install it manually
+Rainbow can be installed either from contribution manager or can be installed manually
 
 for detail's check [How to install contributed library](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library)
 
 ### How to use
-import Rainbow either from contribution mangager or manual installation
+Import Rainbow either from contribution mangager or manual installation
 if you are able to write 
 ~~~
 import Rainbow.*;
@@ -43,6 +43,29 @@ that's it.
 
 <img src="https://i.ibb.co/tYHngNN/Screenshot-edited-104.png" width ="300dp" height="300dp"/>
 
+### Classes
+
+  - MengerSponge
+  - PurpleRain
+  - Blooby
+  - SnakeGame 
+  - Mitosis
+  - SolarSystem
+  - Roses
+  - RandomWalker
+  - AgarIo
+  - Meta
+  - Starfield
+  - RDP
+  - FractalTree
+  - KaliedoScope
+  - MetalBall
+  
+and still adding...
+
+Main purpose of this library is to help beginners to get started with processing.
+All classes in processing library are public to be used outside of package.
+Which means food(snakeGame) can be used independently.
 
 ### Troubleshooting
 
