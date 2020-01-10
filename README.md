@@ -4,7 +4,7 @@ Rainbow can be installed either from contribution manager or can be installed ma
 
 for detail's check [How to install contributed library](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library)
 
-### How to use
+## How to use
 Import Rainbow either from contribution mangager or manual installation.
 
 if you are able to write 
@@ -70,7 +70,7 @@ void mouseClicked(){
 <img src="https://i.ibb.co/1r4MsbC/Screenshot-106.png" width="300dp" height="300dp"/>
 
 
-### Classes
+## Classes
 
   - MengerSponge
   - PurpleRain
@@ -92,14 +92,14 @@ and still adding...
 
 Main purpose of this library is to help beginners to get started with processing.
 All classes in processing library are public to be used outside of package.
-Which means food(snakeGame) can be used independently.
+Which means food(snakeGame) can be used independently. 
 
-### Contributing
+## Contributing
 
   - Open an issue: If you find any bug, or want any enhancement let me know in issues.
   - Adding more classes: Right now Rainbow consists of 30-35 classes, if you can also add your own by forking and creating PR.
   - Update Readme: If you found any typo or grammatical mistake, Please make sure to edit and create PR.
 
-### Troubleshooting
+## Troubleshooting
 
 If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for more information, or contact the author [Pallav Dubey](https://github.com/pallav12/).
