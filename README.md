@@ -5,12 +5,13 @@ Rainbow can be installed either from contribution manager or can be installed ma
 for detail's check [How to install contributed library](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library)
 
 ### How to use
-Import Rainbow either from contribution mangager or manual installation
+Import Rainbow either from contribution mangager or manual installation.
+
 if you are able to write 
 ~~~
 import Rainbow.*;
 ~~~
-without any error then you are good to go.
+without any error, then you are good to go.
 
 Next initialize any Rainbow class in setup(), pass PApplet (this) as arument in constructor.
 For MengerSponge
@@ -97,6 +98,7 @@ Which means food(snakeGame) can be used independently.
 
   - Open an issue: If you find any bug, or want any enhancement let me know in issues.
   - Adding more classes: Right now Rainbow consists of 30-35 classes, if you can also add your own by forking and creating PR.
+  - Update Readme: If you found any typo or grammatical mistake, Please make sure to edit and create PR.
 
 ### Troubleshooting
 
