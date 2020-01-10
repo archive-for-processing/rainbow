@@ -43,6 +43,32 @@ that's it.
 
 <img src="https://i.ibb.co/tYHngNN/Screenshot-edited-104.png" width ="300dp" height="300dp"/>
 
+now you can play with different parameters used in library, for example noise in blooby, angular velocity in planets.
+
+~~~
+import Rainbow.*;
+MengerSponge mengerSponge;
+void setup(){
+  size(600,600,P3D);
+  mengerSponge=new MengerSponge(this);
+}
+void draw(){
+   mengerSponge.boxColor(127,0,225); // for voilet color box
+   
+   // notice boxColor isn't called from setup(), thats because
+   // in the code the box is recreated everytime the onClick
+   mengerSponge.draw();
+  
+}
+void mouseClicked(){
+  mengerSponge.mousePressed(); 
+  
+}
+~~~
+
+<img src="https://i.ibb.co/1r4MsbC/Screenshot-106.png" width="300dp" height="300dp"/>
+
+
 ### Classes
 
   - MengerSponge
@@ -66,6 +92,11 @@ and still adding...
 Main purpose of this library is to help beginners to get started with processing.
 All classes in processing library are public to be used outside of package.
 Which means food(snakeGame) can be used independently.
+
+### Contributing
+
+  - Open an issue: If you find any bug, or want any enhancement let me know in issues.
+  - Adding more classes: Right now Rainbow consists of 30-35 classes, if you can also add your own by forking and creating PR.
 
 ### Troubleshooting
 
