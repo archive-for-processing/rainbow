@@ -1,6 +1,6 @@
 ### Code reference from 
 Daniel Shiffman, Coding train [website](https://thecodingtrain.com)
-## How to install MatrixMath
+## How to install Rainbow
 
 You can install Rainbow eiteher from contribution manager or install it manually
 
