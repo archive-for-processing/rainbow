@@ -1,38 +1,105 @@
-## How to install Your Library
+## How to install Rainbow
 
-### Install with the Contribution Manager
+Rainbow can be installed either from contribution manager or can be installed manually
 
-Add contributed Libraries by selecting the menu item _Sketch_ → _Import Library..._ → _Add Library..._ This will open the Contribution Manager, where you can browse for Your Library, or any other Library you want to install.
+for detail's check [How to install contributed library](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library)
 
-Not all available Libraries have been converted to show up in this menu. If a Library isn't there, it will need to be installed manually by following the instructions below.
+## How to use
+Import Rainbow either from contribution mangager or manual installation.
 
-### Manual Install
+if you are able to write 
+~~~
+import Rainbow.*;
+~~~
+without any error, then you are good to go.
 
-Contributed Libraries may be downloaded separately and manually placed within the `libraries` folder of your Processing sketchbook. To find (and change) the Processing sketchbook location on your computer, open the Preferences window from the Processing application (PDE) and look for the "Sketchbook location" item at the top.
+Next initialize any Rainbow class in setup(), pass PApplet (this) as arument in constructor.
+For MengerSponge
+~~~
+MengerSponge mengerSponge;
+void setup(){
+  size(600,600,P3D);
+  mengerSponge=new MengerSponge(this);
+}
+~~~
+Now to run the actual MengerSponge Animation
+~~~
+void draw(){
+  mengerSponge.draw(); 
+}
+~~~
+Output
 
-By default the following locations are used for your sketchbook folder: 
-  * For Mac users, the sketchbook folder is located inside `~/Documents/Processing` 
-  * For Windows users, the sketchbook folder is located inside `My Documents/Processing`
+<img src="https://i.ibb.co/ZL3DKKJ/Screenshot-103.png" width="300dp" height="300dp"/>
 
-Download Your Library from http://yourlibraryname.com
+You'll notice you still can't click on cube that's because
+If the animation involves any events like mouseClicked(), MousePressed() etc you have to add corresponding events.
 
-Unzip and copy the contributed Library's folder into the `libraries` folder in the Processing sketchbook. You will need to create this `libraries` folder if it does not exist.
+~~~
+void mousePressed(){
+  mengerSponge.mousePressed();
+}
+~~~
+that's it.
 
-The folder structure for Library Your Library should be as follows:
+<img src="https://i.ibb.co/tYHngNN/Screenshot-edited-104.png" width ="300dp" height="300dp"/>
 
-```
-Processing
-  libraries
-    Your Library
-      examples
-      library
-        Your Library.jar
-      reference
-      src
-```
-             
-Some folders like `examples` or `src` might be missing. After Library Your Library has been successfully installed, restart the Processing application.
+now you can play with different parameters used in library, for example noise in blooby, angular velocity in planets.
 
-### Troubleshooting
+~~~
+import Rainbow.*;
+MengerSponge mengerSponge;
+void setup(){
+  size(600,600,P3D);
+  mengerSponge=new MengerSponge(this);
+}
+void draw(){
+   mengerSponge.boxColor(127,0,225); // for voilet color box
+   
+   // notice boxColor isn't called from setup(), thats because
+   // in the code the box is recreated everytime the onClick
+   mengerSponge.draw();
+  
+}
+void mouseClicked(){
+  mengerSponge.mousePressed(); 
+  
+}
+~~~
 
-If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for more information, or contact the author [Your Name](http://yoururl.com).
+<img src="https://i.ibb.co/1r4MsbC/Screenshot-106.png" width="300dp" height="300dp"/>
+
+
+## Classes
+
+  - MengerSponge
+  - PurpleRain
+  - Blooby
+  - SnakeGame 
+  - Mitosis
+  - SolarSystem
+  - Roses
+  - RandomWalker
+  - AgarIo
+  - Meta
+  - Starfield
+  - RDP
+  - FractalTree
+  - KaliedoScope
+  - MetalBall
+  
+and still adding...
+
+Main purpose of this library is to help beginners to get started with processing.
+All classes in processing library are public to be used outside of package.
+Which means food(snakeGame) can be used independently. 
+
+## Contributing
+
+  - Open an issue: If you find any bug, or want any enhancement let me know in issues.
+  - Adding more classes: Right now Rainbow consists of 30-35 classes, if you can also add your own by forking and creating PR.
+  - Update Readme: If you found any typo or grammatical mistake, Please make sure to edit and create PR.
+
+## Troubleshooting
+
+If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for more information, or contact the author [Pallav Dubey](https://github.com/pallav12/).
