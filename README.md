@@ -1,38 +1,53 @@
-## How to install Your Library
+## How to install MatrixMath
 
-### Install with the Contribution Manager
+You can install Rainbow eiteher from contribution manager or install it manually
 
-Add contributed Libraries by selecting the menu item _Sketch_ → _Import Library..._ → _Add Library..._ This will open the Contribution Manager, where you can browse for Your Library, or any other Library you want to install.
+for detail's check [How to install contributed library](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library)
 
-Not all available Libraries have been converted to show up in this menu. If a Library isn't there, it will need to be installed manually by following the instructions below.
+### How to use
 
-### Manual Install
+import Rainbow either from contribution mangager or manual installation
 
-Contributed Libraries may be downloaded separately and manually placed within the `libraries` folder of your Processing sketchbook. To find (and change) the Processing sketchbook location on your computer, open the Preferences window from the Processing application (PDE) and look for the "Sketchbook location" item at the top.
+if you are able to write 
+~~~
+import Rainbow.*;
+~~~
+without any error then you are good to go.
 
-By default the following locations are used for your sketchbook folder: 
-  * For Mac users, the sketchbook folder is located inside `~/Documents/Processing` 
-  * For Windows users, the sketchbook folder is located inside `My Documents/Processing`
+Next initialize any Rainbow class in setup(), pass PApplet (this) as arument in constructor.
 
-Download Your Library from http://yourlibraryname.com
+For MengerSponge
+~~~
+MengerSponge mengerSponge;
+void setup(){
+  size(600,600,P3D);
+  mengerSponge=new MengerSponge(this);
+}
+~~~
+Now to run the actual MengerSponge Animation
+~~~
+void draw(){
+  mengerSponge.draw(); 
+}
+~~~
 
-Unzip and copy the contributed Library's folder into the `libraries` folder in the Processing sketchbook. You will need to create this `libraries` folder if it does not exist.
+Output
 
-The folder structure for Library Your Library should be as follows:
+<img src="https://i.ibb.co/ZL3DKKJ/Screenshot-103.png" width="300dp" height="300dp"/>
 
-```
-Processing
-  libraries
-    Your Library
-      examples
-      library
-        Your Library.jar
-      reference
-      src
-```
-             
-Some folders like `examples` or `src` might be missing. After Library Your Library has been successfully installed, restart the Processing application.
+You'll notice you still can't click on cube that's because
+
+If the animation involves any events like mouseClicked(), MousePressed() etc you have to add corresponding events.
+
+~~~
+void mousePressed(){
+  mengerSponge.mousePressed();
+}
+~~~
+that's it.
+
+<img src="https://i.ibb.co/tYHngNN/Screenshot-edited-104.png" width ="300dp" height="300dp"/>
 
 ### Troubleshooting
 
-If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for more information, or contact the author [Your Name](http://yoururl.com).
+If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for more information, or contact the author [Pallav Dubey](https://github.com/pallav12/).
